@@ -21,26 +21,23 @@ import com.example.composenoteapp.data.Note
 
 @Composable
 fun NoteItem(modifier: Modifier = Modifier, note: Note) {
-    Surface(
-        modifier
-            .clip(RoundedCornerShape(topEnd = 10.dp))
-            .background(Color.DarkGray)
-    ) {
-        Column() {
-            note.title?.let {
-                Text(
-                    text = it,
-                    style = TextStyle(fontSize = 16.sp, fontWeight = FontWeight.Bold),
-                    modifier = Modifier.padding(8.dp)
-                )
-            }
-            note.description?.let {
-                Text(
-                    text = it,
-                    modifier = Modifier.padding(8.dp),
-                    textAlign = TextAlign.Justify
-                )
-            }
+    Column(modifier
+        .clip(RoundedCornerShape(topEnd = 10.dp, bottomStart = 10.dp))
+        .background(Color.Gray)
+        .padding(8.dp)) {
+        note.title?.let {
+            Text(
+                text = it,
+                style = TextStyle(fontSize = 16.sp, fontWeight = FontWeight.Bold),
+                modifier = Modifier.padding(8.dp)
+            )
+        }
+        note.description?.let {
+            Text(
+                text = it,
+                modifier = Modifier.padding(8.dp),
+                textAlign = TextAlign.Justify
+            )
         }
     }
 }
