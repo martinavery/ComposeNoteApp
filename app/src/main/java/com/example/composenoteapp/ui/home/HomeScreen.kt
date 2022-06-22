@@ -22,7 +22,7 @@ fun HomeScreen() {
         val optionsScrollState = rememberScrollState()
         Column(modifier = Modifier.scrollable(optionsScrollState, Orientation.Vertical)) {
             NoteForm()
-            NoteList()
+            NoteList(modifier = Modifier.padding(top = 16.dp))
         }
     }
 }
