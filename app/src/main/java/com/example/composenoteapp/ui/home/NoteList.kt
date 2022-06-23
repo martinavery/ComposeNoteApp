@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.LiveData
 import com.example.composenoteapp.data.DataSource
 import com.example.composenoteapp.data.Note
@@ -22,13 +23,13 @@ import kotlinx.coroutines.flow.StateFlow
 
 
 @Composable
-fun NoteList(modifier: Modifier = Modifier, notes: LiveData<Resulta<List<Note>>>) {
-    val n = notes.observeAsState()
-    when (n.value?.status) {
+fun NoteList(modifier: Modifier = Modifier, viewModel: NoteViewModel) {
+    val n = viewModel.notes.collectAsState()
+    when (n.value.status) {
         Resulta.Status.SUCCESS -> {
-            if (!n.value!!.data.isNullOrEmpty()) {
+            if (!n.value.data.isNullOrEmpty()) {
                 LazyColumn(modifier = modifier) {
-                    items(items = n.value!!.data!!, key = {
+                    items(items = n.value.data!!, key = {
                         it.id
                     }) { note ->
                         NoteItem(note = note, modifier = Modifier.padding(16.dp))

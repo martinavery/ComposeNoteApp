@@ -37,7 +37,7 @@ fun HomeScreen(viewModel: NoteViewModel = hiltViewModel()) {
             }
             NoteList(
                 modifier = Modifier.padding(top = 16.dp),
-                notes = viewModel.notes
+                viewModel = viewModel
             )
         }
     }

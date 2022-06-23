@@ -21,8 +21,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class NoteViewModel @Inject constructor(private val repository: MainRepository) : ViewModel() {
-    private val _notes = MutableLiveData<Resulta<List<Note>>>()
-    val notes: LiveData<Resulta<List<Note>>> = _notes
+    private val _notes = MutableStateFlow<Resulta<List<Note>>>(Resulta.loading())
+    val notes = _notes.asStateFlow()
 
     init {
         viewModelScope.launch {

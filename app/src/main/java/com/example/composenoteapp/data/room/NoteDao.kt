@@ -5,11 +5,12 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.composenoteapp.data.Note
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface NoteDao {
     @Query("SELECT * FROM note")
-    suspend fun fetchNotes(): List<Note>
+     fun fetchNotes(): Flow<List<Note>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addNote(note: Note): Void

@@ -5,6 +5,7 @@ import com.example.composenoteapp.data.Resulta
 import com.example.composenoteapp.data.room.RoomDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
@@ -12,7 +13,9 @@ class MainRepository(private val db: RoomDatabase) : NoteRepository {
     override fun fetchNotes(): Flow<Resulta<List<Note>>> {
         return flow {
             emit(Resulta.loading())
-            emit(Resulta.success(db.noteDao().fetchNotes()))
+            db.noteDao().fetchNotes().collect {
+                emit(Resulta.success(it))
+            }
         }.flowOn(Dispatchers.IO)
     }
 
