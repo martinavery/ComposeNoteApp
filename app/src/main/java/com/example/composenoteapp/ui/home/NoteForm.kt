@@ -1,5 +1,7 @@
 package com.example.composenoteapp.ui.home
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -9,10 +11,13 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.composenoteapp.data.Note
 import com.example.composenoteapp.ui.components.MTextField
+import java.time.LocalDateTime
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
-fun NoteForm() {
+fun NoteForm(onNoteAdded: (Note) -> Unit) {
     var titleState by remember {
         mutableStateOf("")
     }
@@ -31,7 +36,15 @@ fun NoteForm() {
             descState = it
         })
         Button(
-            onClick = { /*TODO*/ },
+            onClick = {
+                onNoteAdded(
+                    Note(
+                        title = titleState,
+                        description = descState,
+                        dateCreated = LocalDateTime.now()
+                    )
+                )
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 32.dp, end = 32.dp)
@@ -41,8 +54,9 @@ fun NoteForm() {
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun NotePreview() {
-    NoteForm()
+    NoteForm({})
 }

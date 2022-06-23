@@ -1,5 +1,7 @@
 package com.example.composenoteapp.ui.home
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Column
@@ -10,18 +12,27 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.composenoteapp.data.Note
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun HomeScreen() {
+    val noteListState = remember {
+        mutableStateListOf<Note>()
+    }
     Scaffold(topBar = { TopBar() }) {
         val optionsScrollState = rememberScrollState()
         Column(modifier = Modifier.scrollable(optionsScrollState, Orientation.Vertical)) {
-            NoteForm()
+            NoteForm() { note ->
+                noteListState.add(note)
+            }
             NoteList(modifier = Modifier.padding(top = 16.dp))
         }
     }
@@ -40,6 +51,7 @@ fun TopBar() {
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun Preview() {
