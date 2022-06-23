@@ -41,7 +41,7 @@ fun NoteForm(onNoteAdded: (Note) -> Unit) {
                     Note(
                         title = titleState,
                         description = descState,
-                        dateCreated = LocalDateTime.now()
+                        //dateCreated = LocalDateTime.now()
                     )
                 )
             },

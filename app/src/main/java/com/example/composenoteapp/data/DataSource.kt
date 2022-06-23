@@ -4,47 +4,19 @@ class DataSource {
     private val notes = arrayListOf(
         Note(
             title = "Note 1",
-            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend suscipit metus, non maximus quam convallis quis. Cras bibendum mi ac eros ultrices, vel viverra justo sagittis. Duis dolor enim, vulputate quis pharetra ac, hendrerit at ante. In aliquet ultrices ipsum, quis iaculis dui sollicitudin non. Etiam molestie auctor velit, eleifend laoreet augue convallis id. Integer ultricies magna a aliquet ullamcorper. Mauris hendrerit tempor odio, dapibus iaculis dolor accumsan vel. Phasellus dictum consequat eleifend. Cras pulvinar, mauris vel efficitur maximus, tortor risus feugiat elit, eu vulputate sapien libero id elit. Maecenas vehicula imperdiet tincidunt. Quisque elit sapien, porta et consequat at, ullamcorper quis sem. In hac habitasse platea dictumst. Aliquam vitae mauris sit amet est condimentum mollis ac a eros. Vestibulum ullamcorper in ante a accumsan. Praesent vehicula justo at dapibus dapibus."
+            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         ),
         Note(
             title = "Note 1",
-            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend suscipit metus, non maximus quam convallis quis. Cras bibendum mi ac eros ultrices, vel viverra justo sagittis. Duis dolor enim, vulputate quis pharetra ac, hendrerit at ante. In aliquet ultrices ipsum, quis iaculis dui sollicitudin non. Etiam molestie auctor velit, eleifend laoreet augue convallis id. Integer ultricies magna a aliquet ullamcorper. Mauris hendrerit tempor odio, dapibus iaculis dolor accumsan vel. Phasellus dictum consequat eleifend. Cras pulvinar, mauris vel efficitur maximus, tortor risus feugiat elit, eu vulputate sapien libero id elit. Maecenas vehicula imperdiet tincidunt. Quisque elit sapien, porta et consequat at, ullamcorper quis sem. In hac habitasse platea dictumst. Aliquam vitae mauris sit amet est condimentum mollis ac a eros. Vestibulum ullamcorper in ante a accumsan. Praesent vehicula justo at dapibus dapibus."
-        ),
-        Note(
-            title = "Note 1",
-            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend suscipit metus, non maximus quam convallis quis. Cras bibendum mi ac eros ultrices, vel viverra justo sagittis. Duis dolor enim, vulputate quis pharetra ac, hendrerit at ante. In aliquet ultrices ipsum, quis iaculis dui sollicitudin non. Etiam molestie auctor velit, eleifend laoreet augue convallis id. Integer ultricies magna a aliquet ullamcorper. Mauris hendrerit tempor odio, dapibus iaculis dolor accumsan vel. Phasellus dictum consequat eleifend. Cras pulvinar, mauris vel efficitur maximus, tortor risus feugiat elit, eu vulputate sapien libero id elit. Maecenas vehicula imperdiet tincidunt. Quisque elit sapien, porta et consequat at, ullamcorper quis sem. In hac habitasse platea dictumst. Aliquam vitae mauris sit amet est condimentum mollis ac a eros. Vestibulum ullamcorper in ante a accumsan. Praesent vehicula justo at dapibus dapibus."
-        ),
-        Note(
-            title = "Note 1",
-            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend suscipit metus, non maximus quam convallis quis. Cras bibendum mi ac eros ultrices, vel viverra justo sagittis. Duis dolor enim, vulputate quis pharetra ac, hendrerit at ante. In aliquet ultrices ipsum, quis iaculis dui sollicitudin non. Etiam molestie auctor velit, eleifend laoreet augue convallis id. Integer ultricies magna a aliquet ullamcorper. Mauris hendrerit tempor odio, dapibus iaculis dolor accumsan vel. Phasellus dictum consequat eleifend. Cras pulvinar, mauris vel efficitur maximus, tortor risus feugiat elit, eu vulputate sapien libero id elit. Maecenas vehicula imperdiet tincidunt. Quisque elit sapien, porta et consequat at, ullamcorper quis sem. In hac habitasse platea dictumst. Aliquam vitae mauris sit amet est condimentum mollis ac a eros. Vestibulum ullamcorper in ante a accumsan. Praesent vehicula justo at dapibus dapibus."
-        ),
-        Note(
-            title = "Note 1",
-            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend suscipit metus, non maximus quam convallis quis. Cras bibendum mi ac eros ultrices, vel viverra justo sagittis. Duis dolor enim, vulputate quis pharetra ac, hendrerit at ante. In aliquet ultrices ipsum, quis iaculis dui sollicitudin non. Etiam molestie auctor velit, eleifend laoreet augue convallis id. Integer ultricies magna a aliquet ullamcorper. Mauris hendrerit tempor odio, dapibus iaculis dolor accumsan vel. Phasellus dictum consequat eleifend. Cras pulvinar, mauris vel efficitur maximus, tortor risus feugiat elit, eu vulputate sapien libero id elit. Maecenas vehicula imperdiet tincidunt. Quisque elit sapien, porta et consequat at, ullamcorper quis sem. In hac habitasse platea dictumst. Aliquam vitae mauris sit amet est condimentum mollis ac a eros. Vestibulum ullamcorper in ante a accumsan. Praesent vehicula justo at dapibus dapibus."
-        ),
-        Note(
-            title = "Note 1",
-            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend suscipit metus, non maximus quam convallis quis. Cras bibendum mi ac eros ultrices, vel viverra justo sagittis. Duis dolor enim, vulputate quis pharetra ac, hendrerit at ante. In aliquet ultrices ipsum, quis iaculis dui sollicitudin non. Etiam molestie auctor velit, eleifend laoreet augue convallis id. Integer ultricies magna a aliquet ullamcorper. Mauris hendrerit tempor odio, dapibus iaculis dolor accumsan vel. Phasellus dictum consequat eleifend. Cras pulvinar, mauris vel efficitur maximus, tortor risus feugiat elit, eu vulputate sapien libero id elit. Maecenas vehicula imperdiet tincidunt. Quisque elit sapien, porta et consequat at, ullamcorper quis sem. In hac habitasse platea dictumst. Aliquam vitae mauris sit amet est condimentum mollis ac a eros. Vestibulum ullamcorper in ante a accumsan. Praesent vehicula justo at dapibus dapibus."
-        ),
-        Note(
-            title = "Note 1",
-            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend suscipit metus, non maximus quam convallis quis. Cras bibendum mi ac eros ultrices, vel viverra justo sagittis. Duis dolor enim, vulputate quis pharetra ac, hendrerit at ante. In aliquet ultrices ipsum, quis iaculis dui sollicitudin non. Etiam molestie auctor velit, eleifend laoreet augue convallis id. Integer ultricies magna a aliquet ullamcorper. Mauris hendrerit tempor odio, dapibus iaculis dolor accumsan vel. Phasellus dictum consequat eleifend. Cras pulvinar, mauris vel efficitur maximus, tortor risus feugiat elit, eu vulputate sapien libero id elit. Maecenas vehicula imperdiet tincidunt. Quisque elit sapien, porta et consequat at, ullamcorper quis sem. In hac habitasse platea dictumst. Aliquam vitae mauris sit amet est condimentum mollis ac a eros. Vestibulum ullamcorper in ante a accumsan. Praesent vehicula justo at dapibus dapibus."
-        ),
-        Note(
-            title = "Note 1",
-            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend suscipit metus, non maximus quam convallis quis. Cras bibendum mi ac eros ultrices, vel viverra justo sagittis. Duis dolor enim, vulputate quis pharetra ac, hendrerit at ante. In aliquet ultrices ipsum, quis iaculis dui sollicitudin non. Etiam molestie auctor velit, eleifend laoreet augue convallis id. Integer ultricies magna a aliquet ullamcorper. Mauris hendrerit tempor odio, dapibus iaculis dolor accumsan vel. Phasellus dictum consequat eleifend. Cras pulvinar, mauris vel efficitur maximus, tortor risus feugiat elit, eu vulputate sapien libero id elit. Maecenas vehicula imperdiet tincidunt. Quisque elit sapien, porta et consequat at, ullamcorper quis sem. In hac habitasse platea dictumst. Aliquam vitae mauris sit amet est condimentum mollis ac a eros. Vestibulum ullamcorper in ante a accumsan. Praesent vehicula justo at dapibus dapibus."
-        ),
-        Note(
-            title = "Note 1",
-            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend suscipit metus, non maximus quam convallis quis. Cras bibendum mi ac eros ultrices, vel viverra justo sagittis. Duis dolor enim, vulputate quis pharetra ac, hendrerit at ante. In aliquet ultrices ipsum, quis iaculis dui sollicitudin non. Etiam molestie auctor velit, eleifend laoreet augue convallis id. Integer ultricies magna a aliquet ullamcorper. Mauris hendrerit tempor odio, dapibus iaculis dolor accumsan vel. Phasellus dictum consequat eleifend. Cras pulvinar, mauris vel efficitur maximus, tortor risus feugiat elit, eu vulputate sapien libero id elit. Maecenas vehicula imperdiet tincidunt. Quisque elit sapien, porta et consequat at, ullamcorper quis sem. In hac habitasse platea dictumst. Aliquam vitae mauris sit amet est condimentum mollis ac a eros. Vestibulum ullamcorper in ante a accumsan. Praesent vehicula justo at dapibus dapibus."
-        ),
-        Note(
-            title = "Note 1",
-            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend suscipit metus, non maximus quam convallis quis. Cras bibendum mi ac eros ultrices, vel viverra justo sagittis. Duis dolor enim, vulputate quis pharetra ac, hendrerit at ante. In aliquet ultrices ipsum, quis iaculis dui sollicitudin non. Etiam molestie auctor velit, eleifend laoreet augue convallis id. Integer ultricies magna a aliquet ullamcorper. Mauris hendrerit tempor odio, dapibus iaculis dolor accumsan vel. Phasellus dictum consequat eleifend. Cras pulvinar, mauris vel efficitur maximus, tortor risus feugiat elit, eu vulputate sapien libero id elit. Maecenas vehicula imperdiet tincidunt. Quisque elit sapien, porta et consequat at, ullamcorper quis sem. In hac habitasse platea dictumst. Aliquam vitae mauris sit amet est condimentum mollis ac a eros. Vestibulum ullamcorper in ante a accumsan. Praesent vehicula justo at dapibus dapibus."
+            description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         ),
     )
 
     fun fetchNotes(): ArrayList<Note> {
         return notes
+    }
+
+    fun addNote(note: Note) {
+        notes.add(note)
     }
 }

@@ -12,6 +12,8 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -19,21 +21,24 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.composenoteapp.data.Note
 
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
-fun HomeScreen() {
-    val noteListState = remember {
-        mutableStateListOf<Note>()
-    }
+fun HomeScreen(viewModel: NoteViewModel = hiltViewModel()) {
+
     Scaffold(topBar = { TopBar() }) {
         val optionsScrollState = rememberScrollState()
         Column(modifier = Modifier.scrollable(optionsScrollState, Orientation.Vertical)) {
             NoteForm() { note ->
-                noteListState.add(note)
+                viewModel.addNote(note)
             }
-            NoteList(modifier = Modifier.padding(top = 16.dp))
+            NoteList(
+                modifier = Modifier.padding(top = 16.dp),
+                notes = viewModel.notes
+            )
         }
     }
 }
